@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="getMbrAccountDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="database_id" type="xs:string" />
+              <xs:element name="appl_id" type="xs:string" />
+              <xs:element name="username" type="xs:unsignedInt" />
+              <xs:element name="password" type="xs:unsignedShort" />
+              <xs:element name="user_token" />
+              <xs:element name="external_tran_id" />
+              <xs:element name="getMbrAccountDetails_input">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="member_id" type="xs:string" />
+                    <xs:element name="lang_code" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="element_list">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ytd_nights" />
+                    <xs:element name="ytd_base_points" />
+                    <xs:element name="ytd_bonus_points" />
+                    <xs:element name="ytd_points_redeemed" />
+                    <xs:element name="ytd_other_points" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
